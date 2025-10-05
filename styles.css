@@ -247,3 +247,20 @@ body {
     font-size: 0.9rem;
   }
 }
+/* Ajustar tamaño uniforme para imágenes de servicios y productos */
+.service-card img,
+.product-card img {
+  width: 100%;            /* se adapta al ancho del contenedor */
+  height: 200px;          /* altura fija para uniformidad */
+  object-fit: cover;      /* recorta para que no se deforme */
+  border-radius: 8px;     /* bordes suaves */
+  margin-bottom: 1rem;    /* separación del texto */
+}
+
+/* Si quieres que sean un poco más pequeñas en móviles */
+@media (max-width: 768px) {
+  .service-card img,
+  .product-card img {
+    height: 160px;
+  }
+}
