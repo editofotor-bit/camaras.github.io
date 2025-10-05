@@ -262,4 +262,9 @@ body {
   margin-right: 5px;  /* espacio entre icono y texto */
   vertical-align: middle; /* alinea con el texto */
 }
+  .icon-carrito {
+  width: 20px;       /* ajusta este valor al tamaño deseado */
+  height: auto;      /* mantiene proporción */
+  margin-right: 5px; /* espacio entre icono y texto */
+  vertical-align: middle; /* alinea con el texto */
 }
