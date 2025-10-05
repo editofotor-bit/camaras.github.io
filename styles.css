@@ -27,11 +27,20 @@ body {
   align-items: center;
   flex-wrap: wrap; /* Permite que los elementos bajen en pantallas pequeñas */
 }
-.header .logo a {
+
+/* === Logo con imagen y texto === */
+.logo a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
   font-size: 1.5rem;
   font-weight: bold;
   color: #222;
-  text-decoration: none;
+}
+.logo-img {
+  width: 40px;      /* Tamaño del logo: puedes ajustar */
+  height: auto;
+  margin-right: 10px; /* Espacio entre el logo y el texto */
 }
 
 /* Botón hamburguesa */
@@ -156,8 +165,6 @@ body {
   border: 1px solid #ccc;
   border-radius: 5px;
 }
-
-
 
 /* ====== Media Queries ====== */
 
