@@ -1,1 +1,129 @@
-<h1>hola mundo</h1>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SecureTech - Cámaras de Seguridad & Videovigilancia</title>
+  <meta name="description" content="SecureTech — soluciones en videovigilancia, seguridad electrónica y monitoreo para empresas y hogares" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ====== Header ====== -->
+  <header class="header">
+  <div class="container">
+    <div class="logo">
+      <a href="/">DIGISISTEM</a>
+    </div>
+
+    <!-- Botón hamburguesa -->
+    <div class="menu-toggle" id="mobile-menu">
+      &#9776; <!-- icono de tres líneas -->
+    </div>
+
+    <!-- Menú -->
+    <nav class="nav">
+      <ul>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#acerca">Acerca</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+  <!-- ====== Hero / Banner principal ====== -->
+  <section class="hero">
+    <div class="container">
+      <h1>Protege lo que más importa</h1>
+      <p>Sistemas de videovigilancia, alarmas y monitoreo 24/7 para tu hogar o negocio.</p>
+      <a href="#contacto" class="btn btn-primary">Cotizar ahora</a>
+    </div>
+  </section>
+
+  <!-- ====== Servicios ====== -->
+  <section id="servicios" class="services">
+    <div class="container">
+      <h2>Nuestros Servicios</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Videovigilancia</h3>
+          <p>Instalación de cámaras CCTV de alta definición.</p>
+        </div>
+        <div class="service-card">
+          <h3>Alarmas</h3>
+          <p>Sistemas de alarma y detección de intrusos.</p>
+        </div>
+        <div class="service-card">
+          <h3>Control de acceso</h3>
+          <p>Gestión de accesos con tecnología moderna.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== Productos destacados ====== -->
+  <section id="productos" class="products">
+    <div class="container">
+      <h2>Productos Destacados</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="ruta-imagen-1.jpg" alt="Producto 1" />
+          <h3>Nombre Producto 1</h3>
+          <p>Características breves.</p>
+        </div>
+        <div class="product-card">
+          <img src="ruta-imagen-2.jpg" alt="Producto 2" />
+          <h3>Nombre Producto 2</h3>
+          <p>Características breves.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== Acerca de / Nosotros ====== -->
+  <section id="acerca" class="about">
+    <div class="container">
+      <h2>Quiénes Somos</h2>
+      <p>Somos una empresa especializada en seguridad electrónica con años de experiencia en el mercado...</p>
+    </div>
+  </section>
+
+  <!-- ====== Contacto ====== -->
+  <section id="contacto" class="contact">
+    <div class="container">
+      <h2>Contáctanos</h2>
+      <form action="#" method="post">
+        <label for="name">Nombre</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Mensaje</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
+    </div>
+  </section>
+<script>
+const menuToggle = document.getElementById('mobile-menu');
+const nav = document.querySelector('.nav');
+const navLinks = document.querySelectorAll('.nav ul li a');
+
+// Abrir/cerrar menú al presionar el botón
+menuToggle.addEventListener('click', () => {
+  nav.classList.toggle('active');
+});
+
+// Cerrar menú al hacer click en un enlace
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    nav.classList.remove('active');
+  });
+});
+</script>
+</body>
+</html>
+
