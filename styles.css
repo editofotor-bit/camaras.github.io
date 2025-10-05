@@ -256,4 +256,10 @@ body {
     padding: 0.6rem 1.2rem;
     font-size: 0.9rem;
   }
+  .icon-carrito {
+  width: 20px;        /* tamaño del icono */
+  height: auto;
+  margin-right: 5px;  /* espacio entre icono y texto */
+  vertical-align: middle; /* alinea con el texto */
+}
 }
