@@ -25,7 +25,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap; /* Permite que los elementos bajen en pantallas pequeñas */
+  flex-wrap: wrap;
 }
 
 /* === Logo con imagen y texto === */
@@ -38,9 +38,9 @@ body {
   color: #222;
 }
 .logo-img {
-  width: 40px;      /* Tamaño del logo: puedes ajustar */
+  width: 40px;
   height: auto;
-  margin-right: 10px; /* Espacio entre el logo y el texto */
+  margin-right: 10px;
 }
 
 /* Botón hamburguesa */
@@ -54,12 +54,9 @@ body {
 .nav ul {
   list-style: none;
   display: flex;
-  gap: 2rem; /* Espacio entre links */
+  gap: 2rem;
   margin: 0;
   padding: 0;
-}
-.nav ul li {
-  margin: 0;
 }
 .nav a {
   text-decoration: none;
@@ -114,6 +111,8 @@ body {
   background: #f9f9f9;
   padding: 2rem;
   border-radius: 8px;
+  overflow: hidden; /* evita que la imagen se salga */
+  text-align: center;
 }
 
 /* Products */
@@ -131,11 +130,20 @@ body {
   padding: 1.5rem;
   border: 1px solid #eee;
   border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
 }
+
+/* Imágenes dentro de tarjetas */
+.service-card img,
 .product-card img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 5px;
+  width: 100%;
+  max-width: 250px;   /* nunca será más grande que la tarjeta */
+  height: 160px;      /* altura fija para uniformidad */
+  object-fit: cover;  /* mantiene proporción, recorta sin deformar */
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto 1rem auto;
 }
 
 /* About */
@@ -178,9 +186,8 @@ body {
   }
 }
 
-/* Móviles (pantallas pequeñas) */
+/* Móviles */
 @media (max-width: 768px) {
-  /* Header: logo y botón hamburguesa */
   .header .container {
     flex-direction: row;
     justify-content: space-between;
@@ -188,21 +195,20 @@ body {
     gap: 1rem;
   }
 
-  /* Mostrar solo el botón, ocultar menú inicialmente */
   .menu-toggle {
     display: block;
   }
   .nav {
-    display: none; /* Oculto por defecto */
+    display: none;
     width: 100%;
     background: #fff;
     position: absolute;
-    top: 60px; /* altura del header */
+    top: 60px;
     left: 0;
     z-index: 999;
   }
   .nav.active {
-    display: block; /* Se muestra al hacer click */
+    display: block;
   }
   .nav ul {
     flex-direction: column;
@@ -214,7 +220,6 @@ body {
     display: block;
   }
 
-  /* Hero: texto más pequeño */
   .hero h1 {
     font-size: 1.8rem;
   }
@@ -222,19 +227,24 @@ body {
     font-size: 1rem;
   }
 
-  /* Formularios de contacto */
   .contact form {
     width: 100%;
     padding: 0 1rem;
   }
 
-  /* Grid de servicios y productos: una columna */
   .services-grid, .product-grid {
     grid-template-columns: 1fr;
   }
+
+  /* imágenes más pequeñas en móvil */
+  .service-card img,
+  .product-card img {
+    max-width: 180px;
+    height: 130px;
+  }
 }
 
-/* Muy pequeños (teléfonos pequeños) */
+/* Muy pequeños */
 @media (max-width: 480px) {
   .hero h1 {
     font-size: 1.5rem;
@@ -246,31 +256,4 @@ body {
     padding: 0.6rem 1.2rem;
     font-size: 0.9rem;
   }
-}
-/* Ajustar tamaño uniforme para imágenes de servicios y productos */
-.service-card img,
-.product-card img {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 8px;
-  display: block;
-  margin: 0 auto 1rem auto;
-}
-
-/* Si quieres que sean un poco más pequeñas en móviles */
-@media (max-width: 768px) {
-  .service-card img,
-  .product-card img {
-    height: 160px;
-  }
-}
-.service-card img,
-.product-card img {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 8px;
-  display: block;
-  margin: 0 auto 1rem auto;
 }
