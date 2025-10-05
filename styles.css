@@ -250,11 +250,12 @@ body {
 /* Ajustar tamaño uniforme para imágenes de servicios y productos */
 .service-card img,
 .product-card img {
-  width: 100%;            /* se adapta al ancho del contenedor */
-  height: 200px;          /* altura fija para uniformidad */
-  object-fit: cover;      /* recorta para que no se deforme */
-  border-radius: 8px;     /* bordes suaves */
-  margin-bottom: 1rem;    /* separación del texto */
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto 1rem auto;
 }
 
 /* Si quieres que sean un poco más pequeñas en móviles */
@@ -263,4 +264,13 @@ body {
   .product-card img {
     height: 160px;
   }
+}
+.service-card img,
+.product-card img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto 1rem auto;
 }
